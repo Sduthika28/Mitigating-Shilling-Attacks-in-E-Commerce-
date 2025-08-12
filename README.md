@@ -8,10 +8,14 @@ The system monitors user behavior, analyzes rating patterns, and flags suspiciou
 
 ---
 
-## 🛠 Tools & Technologies
-- **Frontend:** HTML, CSS  
-- **Backend:** PHP  
-- **Database:** MySQL  
+## 🛠 Technology Usage
+| Technology | Usage |
+|------------|-------:|
+| CSS        | 48.5%  |
+| ASP.NET    | 20.1%  |
+| JavaScript | 16.5%  |
+| HTML       | 13.0%  |
+| C#         | 1.9%   |
 
 ---
 
@@ -27,30 +31,44 @@ The system monitors user behavior, analyzes rating patterns, and flags suspiciou
 
 ## ⚙️ Installation & Setup
 1. **Clone this repository:**
-   
-   git clone https://github.com/Sduthika28/shilling-attack-ecommerce.git
+git clone https://github.com/Sduthika28/shilling-attack-ecommerce.git
+2. **Open the project in Visual Studio** (or your preferred IDE that supports ASP.NET and C#).  
+3. **Restore NuGet packages** if prompted.  
+4. **Set up the database**. 
+5. **Run the project** using IIS Express or your configured server.  
+6. **Access the application** in your browser:
+http://localhost:xxxx
+*(Replace `xxxx` with the port number shown when running the project.)*
 
-2. **Import the database:**
-- Import the `database.sql` file into your MySQL server.
-3. **Configure the database connection:**
-- Update `php/config.php` with your MySQL credentials.
-4. **Start your local server:**
-- Use XAMPP, WAMP, or any local server environment.
-5. **Access the application:**
-http://localhost/shilling-attack-ecommerce
+
 
 ---
 
 ## 📊 How It Works
-1. **User Behavior Tracking** – Records all user activities, including ratings and reviews.  
-2. **Pattern Analysis** – Compares ratings against average user trends.  
-3. **Suspicion Scoring** – Assigns scores to detect abnormal behaviors.  
-4. **Admin Review** – Flags suspicious accounts for manual verification.
+1. **User Interaction Layer (HTML, CSS, JavaScript)**  
+- Users browse products, leave reviews, and rate items through a responsive front-end interface.  
+- JavaScript handles dynamic updates, form validation, and asynchronous data fetching via AJAX calls.
 
+2. **Application Layer (ASP.NET, C#)**  
+- ASP.NET controllers process incoming requests, manage user sessions, and route data between the UI and the database.  
+- Review submissions are validated server-side to prevent injection or manipulation.
+
+3. **Data Layer (SQL Server)**  
+- Stores user profiles, products, reviews, and ratings.  
+- Specialized queries analyze rating patterns, frequency, and deviation from norms.
+
+4. **Shilling Attack Detection**  
+- The system applies rule-based detection to identify abnormal rating patterns (e.g., repeated high/low ratings for specific items from the same user/IP).  
+- Suspicious users or reviews are flagged for admin review.
+
+5. **Admin Review Dashboard**  
+- Admins can view flagged accounts, suspicious products, and related rating histories.  
+- Option to remove fraudulent reviews or suspend malicious accounts.
 ---
 
 ## 📌 Future Enhancements
 - Machine learning-based detection for higher accuracy  
 - Email alerts for flagged accounts  
 - Advanced data visualization for admin insights
+
 
